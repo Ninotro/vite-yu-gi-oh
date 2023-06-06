@@ -1,11 +1,13 @@
 <script>
 import SingleCard from "../components/SingleCard.vue"
 import {store} from "../store.js"
+import SearchComponent from "../components/SearchComponent.vue";
 
 export default {
 
   components : {
-    SingleCard
+    SingleCard,
+    SearchComponent
   },
   name : "ListCards",
 
@@ -24,7 +26,7 @@ export default {
 <template>
 
    <section id="main-container">
-
+    <SearchComponent />
     <div id="footer-list">
         <p>paperino</p>
     </div>

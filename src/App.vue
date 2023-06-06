@@ -3,10 +3,12 @@ import axios from "axios";
 import { store } from "./store.js";
 import AppHeader from "./components/AppHeader.vue"
 import ListCards from "./components/ListCards.vue"
+import SearchComponent from "./components/SearchComponent.vue";
 export default {
   components: {
     AppHeader,
     ListCards,
+    SearchComponent,
   },
 
   data () {
@@ -40,6 +42,7 @@ export default {
 
 <template>
   <AppHeader/>
+  
 
 
   
