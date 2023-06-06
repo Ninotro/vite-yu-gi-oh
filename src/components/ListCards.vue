@@ -1,7 +1,19 @@
 <script>
+import SingleCard from "../components/SingleCard.vue"
+import {store} from "../store.js"
 
 export default {
+
+  components : {
+    SingleCard
+  },
   name : "ListCards",
+
+  data() {
+    return {
+       store
+    }
+  }
 
 
   
@@ -16,6 +28,11 @@ export default {
     <div id="footer-list">
         <p>paperino</p>
     </div>
+    <div id="card-list">
+        <SingleCard v-for="character in store.characterList" 
+        :details="character" />
+    </div>
+    
 
    </section>
        
@@ -29,7 +46,7 @@ export default {
 
 #main-container {
     width: 80%;
-    height: 1000px;
+    
     margin: 0 auto;
     background-color: white;
     #footer-list {
@@ -44,6 +61,13 @@ export default {
 
 
         }
+    }
+
+    #card-list {
+      padding: 20px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 }
 
